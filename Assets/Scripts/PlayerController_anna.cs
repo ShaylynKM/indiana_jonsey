@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController_anna : MonoBehaviour
 {
+    public int speed = 20;
+
     private Vector2Int targetPosition;
 
     private void Awake()
@@ -33,7 +35,7 @@ public class PlayerController_anna : MonoBehaviour
     private void MoveTowardsTargetPosition()
     {
         // use Vector2.MoveTowards to smoothly move the player
-        transform.position = Vector2.MoveTowards(transform.position, targetPosition, 20 * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
     }
 
     private void SetNewTargetPositionFromInput()
