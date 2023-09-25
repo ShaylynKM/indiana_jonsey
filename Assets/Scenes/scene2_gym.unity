@@ -132,8 +132,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 81243224}
+  - component: {fileID: 81243225}
   m_Layer: 0
-  m_Name: Point2
+  m_Name: StartPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -154,6 +155,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &81243225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81243223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0453acd2fb414b40a6f669d96499e8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &429960258
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 775bdd7fe939e1444a4687adb52566d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnLocation: Point1
+  spawnLocation: StartPoint
   sceneName: Tierra_gym
 --- !u!61 &429960261
 BoxCollider2D:
@@ -309,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7d042774c73c64b9a444f90c140001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 273206571242109398, guid: dc8899c75af10b8488baad7d89f557e4, type: 3}
+  Player: {fileID: 4623184167653556236, guid: 88c16f202e148b94992e83fe76c0dd5a, type: 3}
 --- !u!4 &1385201997
 Transform:
   m_ObjectHideFlags: 0
