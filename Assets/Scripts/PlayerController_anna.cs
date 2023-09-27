@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController_anna : MonoBehaviour
 {
     public int speed = 20;
+    //private Levers levers;
 
     private Vector2Int targetPosition;
 
@@ -58,7 +59,34 @@ public class PlayerController_anna : MonoBehaviour
         {
             targetPosition += Vector2Int.right;
         }
-
     }
+
+    //public bool OnInteract()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.Space))
+    //    {
+    //        return true;
+    //    }
+    //    else
+    //    {
+    //        return false;
+    //    }
+    //}
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.CompareTag("Lever"))
+    //    {
+    //        Debug.Log("trigger");
+    //        if (Input.GetKey(KeyCode.Space))
+    //        {
+    //            ClickLever();
+    //        }
+    //    }
+    //}
+
+    //private void ClickLever()
+    //{
+    //    levers.OnLeverClicked();
+    //}
 }
 
