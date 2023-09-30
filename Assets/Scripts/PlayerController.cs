@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController_anna : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public int speed = 20;
     //private Levers levers;
