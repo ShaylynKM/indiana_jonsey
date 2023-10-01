@@ -1,6 +1,7 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class EnemyProjectile : EnemyDamage
+public class EnemyProjectile : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float resetTime;
@@ -20,7 +21,15 @@ public class EnemyProjectile : EnemyDamage
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        base.OnTriggerEnter2D(collision);
-        gameObject.SetActive(false); //When this hits any object it will deactivate arrows
+        if (collision.CompareTag("Player"))
+        {
+            Debug.Log("I am dead");
+            Die();
+        }
+    }
+    private void Die()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 }

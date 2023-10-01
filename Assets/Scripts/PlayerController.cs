@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     //private Levers levers;
 
     private Vector2Int targetPosition;
+    public static PlayerController Instance;
 
     private void Awake()
     {
@@ -16,6 +17,19 @@ public class PlayerController : MonoBehaviour
 
         // snap the player's transform to the initial target position
         transform.position = (Vector2)targetPosition;
+    }
+    private void Start()
+    {
+        if(Instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        else
+        {
+            Instance = this;
+            GameObject.DontDestroyOnLoad(this.gameObject);
+        }
     }
 
     private void Update()
