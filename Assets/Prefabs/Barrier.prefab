@@ -12,9 +12,8 @@ GameObject:
   - component: {fileID: 6933470656729206846}
   - component: {fileID: -870075057784605527}
   - component: {fileID: 5100249525905298110}
-  - component: {fileID: 152499302547041726}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 0.5283019, g: 0.28543344, b: 0.1769313, a: 1}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -134,17 +133,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &152499302547041726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6933470656729206845}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dc534793d1d4394b9b7d37646aa7563, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  door: {fileID: 6933470656729206845}
-  key: {fileID: 847097627406429272, guid: ca6158fe4664d864caf3e8d1a8ee6fc4, type: 3}
