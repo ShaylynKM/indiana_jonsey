@@ -7,6 +7,7 @@ public class ChangeScene : MonoBehaviour
 {
     [SerializeField] private string spawnLocation;
     public int sceneBuildIndex;
+    public GameObject player;
     private void OnTriggerEnter2D(Collider2D other)
     {
         print("Trigger Entered");
@@ -14,6 +15,7 @@ public class ChangeScene : MonoBehaviour
         {
             print("Switching Scene to " + sceneBuildIndex);
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
+            DontDestroyOnLoad(player);
         }
     }
 }
