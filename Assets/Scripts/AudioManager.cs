@@ -43,4 +43,29 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void PlayWalk()
+    {
+
+    }
+
+    public void PlayDie()
+    {
+
+    }
+
+    public void PlayVictory()
+    {
+
+    }
+
+    public void PlayKeyPickup()
+    {
+
+    }
+
+    public void PlayDoor()
+    {
+
+    }
+
 }
