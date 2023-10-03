@@ -28,6 +28,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioSource _door;
 
+    [SerializeField]
+    private AudioSource _pullLever;
+
     void Start()
     {
         
@@ -45,27 +48,32 @@ public class AudioManager : MonoBehaviour
 
     public void PlayWalk()
     {
-
+        _walk.Play();
     }
 
     public void PlayDie()
     {
-
+        _die.Play();
     }
 
     public void PlayVictory()
     {
-
+        _victory.Play();
     }
 
     public void PlayKeyPickup()
     {
-
+        _keyPickup.Play();
     }
 
     public void PlayDoor()
     {
+        _door.Play();
+    }
 
+    public void PlayPullLever()
+    {
+        _pullLever.Play();
     }
 
 }

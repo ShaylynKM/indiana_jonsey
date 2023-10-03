@@ -1,9 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
+    #region Events
+
+    // All of these must have an associated function. May place them in other scripts if it makes more sense
+    public UnityEvent WalkEvent;
+    public UnityEvent VictoryEvent;
+    public UnityEvent KeyPickupEvent;
+    public UnityEvent DoorEvent;
+    public UnityEvent PullLeverEvent;
+
+    #endregion
+
     public int speed = 20;
     //private Levers levers;
 
