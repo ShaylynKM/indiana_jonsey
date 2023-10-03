@@ -584,6 +584,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5100249525905298110, guid: d0ceae629137a1a4d99c1bcc6db1e9a9, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6933470656729206845, guid: d0ceae629137a1a4d99c1bcc6db1e9a9, type: 3}
       propertyPath: m_Name
       value: Barrier
