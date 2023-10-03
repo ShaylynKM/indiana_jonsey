@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour
 {
     public GameObject door; 
     public GameObject key;
     private bool hasKey = false; 
-    private bool playerInsideCollider = false; 
+    private bool playerInsideCollider = false;
+    [SerializeField] private string _nextScene;
+    
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -38,6 +41,7 @@ public class DoorController : MonoBehaviour
         if (playerInsideCollider && hasKey && Input.GetKeyDown(KeyCode.Space))
         {
             door.SetActive(false);
+            SceneManager.LoadScene(_nextScene);
             Debug.Log("Door opened!");
         }
     }

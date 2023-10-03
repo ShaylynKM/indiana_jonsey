@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     public int speed = 20;
     //private Levers levers;
 
-    private Vector2Int targetPosition;
+    private Vector2 targetPosition; //was vector2Int
 
     private void Awake()
     {
@@ -35,8 +35,8 @@ public class PlayerController : MonoBehaviour
 
     private void MoveTowardsTargetPosition()
     {
-        // use Vector2.MoveTowards to smoothly move the player
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+        targetPosition = new Vector2(transform.position.x,transform.position.y); //fixes collision issues but does something to movement
     }
 
     private void SetNewTargetPositionFromInput()
