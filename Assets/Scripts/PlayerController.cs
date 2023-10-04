@@ -58,18 +58,34 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             targetPosition += Vector2Int.up;
+            if (targetPosition.x != transform.position.x)
+            {
+                targetPosition.x = transform.position.x;
+            }
         }
         if (Input.GetKey(KeyCode.A))
         {
             targetPosition += Vector2Int.left;
+            if (targetPosition.y != transform.position.y)
+            {
+                targetPosition.y = transform.position.y;
+            }
         }
         if (Input.GetKey(KeyCode.S))
         {
             targetPosition += Vector2Int.down;
+            if (targetPosition.x != transform.position.x)
+            {
+                targetPosition.x = transform.position.x;
+            }
         }
         if (Input.GetKey(KeyCode.D))
         {
             targetPosition += Vector2Int.right;
+            if(targetPosition.y != transform.position.y)
+            {
+                targetPosition.y = transform.position.y;
+            }
         }
     }
 

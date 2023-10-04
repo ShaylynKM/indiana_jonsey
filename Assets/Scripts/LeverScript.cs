@@ -1,30 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class LeverScript : MonoBehaviour
 {
-    public GameObject barrier; 
+    public Sprite NeutralSprite;
     public Sprite pressedLeverSprite; 
     private SpriteRenderer leverSpriteRenderer; 
     private bool isLeverActivated = false;
-
+    public UnityEvent leverEvent;
+    private bool isPressed = false;
     void Start()
     {
         leverSpriteRenderer = GetComponent<SpriteRenderer>();
+        NeutralSprite = leverSpriteRenderer.sprite;
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && isLeverActivated)
         {
-            barrier.SetActive(false);
-
+            leverEvent.Invoke();
+            // barrier.SetActive(false);
+            isPressed = !isPressed;
             // Change the lever's sprite to the pressed sprite
-            if (pressedLeverSprite != null)
+            if ((pressedLeverSprite != null) && (isPressed == false))
             {
                 leverSpriteRenderer.sprite = pressedLeverSprite;
             }
+            else
+            {
+                leverSpriteRenderer.sprite = NeutralSprite;
+            }
+            AudioManager.Instance.PlayDoor();
         }
     }
 

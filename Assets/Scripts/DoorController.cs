@@ -40,8 +40,9 @@ public class DoorController : MonoBehaviour
         // Check if the player is inside the door's collider and presses the space bar
         if (playerInsideCollider && hasKey && Input.GetKeyDown(KeyCode.Space))
         {
-            door.SetActive(false);
-            SceneManager.LoadScene(_nextScene);
+            door.GetComponent<SpriteRenderer>().enabled = false;
+            AudioManager.Instance.PlayVictory();
+            StartCoroutine("Wait");
             Debug.Log("Door opened!");
         }
     }
@@ -52,6 +53,14 @@ public class DoorController : MonoBehaviour
         hasKey = true;
         key.SetActive(false);
         Debug.Log("Key collected!");
+    }
+
+    IEnumerator Wait()
+    {
+        Time.timeScale = 0f;
+        yield return new WaitForSecondsRealtime(1.420f);
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(_nextScene);
     }
 }
 

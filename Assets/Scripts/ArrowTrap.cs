@@ -6,6 +6,7 @@ public class ArrowTrap : MonoBehaviour
     [SerializeField] private Transform firePoint;
     [SerializeField] private GameObject[] arrows;
     private float cooldownTimer;
+    [SerializeField]private bool active; //if set to active it will be firing
 
     private void Attack()
     {
@@ -23,11 +24,20 @@ public class ArrowTrap : MonoBehaviour
         return 0;
     }
     private void Update()
-    {
-        cooldownTimer += Time.deltaTime;
-        if(cooldownTimer >= attackCoolDown)
+    {   
+        if (active)
         {
-            Attack();
+            cooldownTimer += Time.deltaTime;
+            if (cooldownTimer >= attackCoolDown)
+            {
+                Attack();
+            }
         }
+        
+    }
+
+    public void Activate()
+    {
+        active = !active;
     }
 }

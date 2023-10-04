@@ -14,6 +14,7 @@ public class KeyController : MonoBehaviour
         {
             // Call the CollectKey function in the DoorController script
             doorController.CollectKey();
+            AudioManager.Instance.PlayKeyPickup();
             Destroy(gameObject);
         }
     }

@@ -1,17 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.Events;
-using System;
+
 
 public class AudioManager : MonoBehaviour
 {
-    #region Singleton
 
-    private static AudioManager _audioInstance;
-    public static AudioManager AudioInstance {  get { return _audioInstance; } }
-
-    #endregion
+    private static AudioManager instance;
 
     [SerializeField]
     private AudioSource _walk;
@@ -31,19 +25,27 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioSource _pullLever;
 
-    void Start()
+    public static AudioManager Instance
     {
-        
+        get
+        {
+            return instance;
+        }
     }
 
-    private void Awake()
+    void Awake()
     {
-        // Keeps the AudioManager from being destroyed when the scene changes
-        if(AudioInstance != this)
+        // Keeps the correct instance from being destroyed on load
+        if (instance == null)
         {
-            Destroy(this.gameObject);
+            instance = this;
+            //DontDestroyOnLoad(gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
+        else
+        {
+            // If there are multiple instances, destroy this one
+            Destroy(this);
+        }
     }
 
     public void PlayWalk()
