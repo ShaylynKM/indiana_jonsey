@@ -216,6 +216,7 @@ MonoBehaviour:
   - {fileID: 3509975332388822607}
   - {fileID: 6638129433267473324}
   - {fileID: 5349488503369932802}
+  active: 0
 --- !u!1001 &1163942462005144479
 PrefabInstance:
   m_ObjectHideFlags: 0

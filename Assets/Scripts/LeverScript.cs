@@ -23,9 +23,9 @@ public class LeverScript : MonoBehaviour
         {
             leverEvent.Invoke();
             // barrier.SetActive(false);
-            isPressed = !isPressed;
+            
             // Change the lever's sprite to the pressed sprite
-            if ((pressedLeverSprite != null) && (isPressed == false))
+            if (isPressed == false)
             {
                 leverSpriteRenderer.sprite = pressedLeverSprite;
             }
@@ -33,6 +33,7 @@ public class LeverScript : MonoBehaviour
             {
                 leverSpriteRenderer.sprite = NeutralSprite;
             }
+            isPressed = !isPressed;
             AudioManager.Instance.PlayDoor();
         }
     }

@@ -815,6 +815,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1524333276996000502, guid: 52ab8cddf7fcbde4aabfcdfbbfc12e65, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3374964879830312446, guid: 52ab8cddf7fcbde4aabfcdfbbfc12e65, type: 3}
       propertyPath: m_Name
       value: GameBounds
