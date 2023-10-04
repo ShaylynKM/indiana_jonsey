@@ -427,22 +427,22 @@ PrefabInstance:
     - target: {fileID: 7524809473802322633, guid: 8da709ec8cd643c4b9e75f620371a35b, type: 3}
       propertyPath: pressedLeverSprite
       value: 
-      objectReference: {fileID: 21300000, guid: d865ff2fd3fcda5468cedaa00b355844, type: 3}
+      objectReference: {fileID: 21300000, guid: 2ea3f687fb3cb4849a595bb6645fe918, type: 3}
     - target: {fileID: 7524809473802322634, guid: 8da709ec8cd643c4b9e75f620371a35b, type: 3}
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7524809473802322634, guid: 8da709ec8cd643c4b9e75f620371a35b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 40
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7524809473802322634, guid: 8da709ec8cd643c4b9e75f620371a35b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 40
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7524809473802322634, guid: 8da709ec8cd643c4b9e75f620371a35b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7524809473802322634, guid: 8da709ec8cd643c4b9e75f620371a35b, type: 3}
       propertyPath: m_LocalPosition.x

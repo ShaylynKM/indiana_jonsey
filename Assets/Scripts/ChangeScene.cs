@@ -15,7 +15,7 @@ public class ChangeScene : MonoBehaviour
         {
             print("Switching Scene to " + sceneBuildIndex);
             SceneManager.LoadScene(sceneBuildIndex, LoadSceneMode.Single);
-            DontDestroyOnLoad(player);
+            //DontDestroyOnLoad(player);
         }
     }
 }
